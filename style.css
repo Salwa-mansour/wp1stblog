@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family:'roboto', Arial, Helvetica, sans-serif; */
+    box-sizing: border-box;
+
+    font-family: Arial,'lucida Sans Unicode';
+    line-height: 1.5;
+
+    /* direction: rtl; */
+}
+body{
+    background-image: url('./images/texturebackground1.jpg');
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+div#page{
+  width:80vw ;
+  margin:.8rem auto;
+}
+div.site-branding{
+    position: relative;
+    background-color: rgb(104, 109, 224);
+    height:30vh;
+    width: 100%;
+}
+div.site-branding .hero-img{
+    width: 100%;
+    height: 100%;
+   
+    object-fit:cover ;
+    object-position: bottom;
+}
+div.site-branding .site-identity{
+    position: absolute;
+    /* https://elad.medium.com/new-css-logical-properties-bc6945311ce7 */
+    inset-block-start:25%; /* top:25%; */
+    offset-inline-start: 25%;
+    inset-inline-start:8%;/* left:8%; */
+}
+div.site-branding .site-identity .site-title{
+    
+    display: flex;
+    justify-content: flex-start;
+    /* line-height: 3; */
+}
+.site-title a,
+.site-description{
+    color: white;
+    text-shadow: 2px 2px 10px black;
+}
+div.site-branding .site-identity .site-title .site-logo,
+div.site-branding .site-identity .site-title h1 {
+    align-self: center;
+}
+.site-identity .site-logo{
+    max-height: 3rem;
+}
+.site-identity p{
+    padding-inline-start: .8rem;
+}
+h1,h2,h3{
+    text-transform: capitalize;
+
+}
+header.site-header nav.main-navigation ul{
+   height: 40px;
+   width: 100%;
+   margin: 2px 0;
+
+}
+header.site-header nav.main-navigation .menu-item{
+    display: inline-block;
+    line-height: 2;
+
+}
+header.site-header nav.main-navigation .menu-item a{
+
+   overflow-x: visible;
+    display: inline-block;
+    height: 100%;
+    width:100%;
+    /* border-left:3px rgb(78, 152, 248) solid; */
+    border-inline-start: 3px rgb(78, 152, 248) solid;
+    margin-right: 8px;
+     padding: 0px 8px;
+     margin-top: 4px;
+     transition: border-left ease-in-out 200ms;
+    will-change: width ,  border-left;
+}
+header.site-header nav.main-navigation .menu-item a:hover{
+    border-left:3px rgb(21, 71, 136) solid;
+    width: auto;
+}
+.main-flex-wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.main-flex-wrapper .widget-area {
+    width: 100%;
+}
+.main-flex-wrapper .widget-area .widget{
+    
+    margin: .5rem;
+    box-shadow: 0px 0px 30px rgb(223, 223, 223);
+    padding: 1.5rem .5rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: rgba(104, 109, 224,0.5);
+}
+
+
+main.site-main {
+    background-color: whitesmoke;
+    margin: .5rem;
+    box-shadow: 0px 0px 30px rgb(223, 223, 223);
+    padding: .8rem 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+footer.site-footer .site-info{
+    padding: .8rem 1rem;
+    border-radius: 5px;
+    background-color: rgba(104, 109, 224);
+    display: flex;
+    justify-content: space-between;
+}
+article figure figcaption {
+    font-size: .8rem;
+    color: rgb(94, 94, 94);
+    text-align: center;
+}
+article .post-img{
+    width: 100%;
+    background-color: rgb(104, 109, 224);
+}
+article .post-content{
+    padding: .5rem;
+}
+article{
+    margin-block-end:2rem ;/* magin-bottom */
+}
+.article-categories ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* justify-content: space-around; */
+    font-size: .8rem;
+    margin: .5rem .25rem;
+}
+.article-categories ul li{
+    /* background-color: red; */
+    margin: .25rem ;
+}
+.article-categories ul li a{
+    display: inline-block;
+    padding: 2px 12px;
+    min-width: 4rem;
+    text-shadow: 0px 0px 1px black;
+    background-color: rgb(104, 109, 224);
+    text-align: center;
+    color: white;
+    border-radius: 50px;
+}
+
+@media only screen and (min-width : 680px){
+    .main-flex-wrapper{
+        flex-wrap: nowrap;
+    }
+    .main-flex-wrapper .site-main{
+     flex-grow: 1;
+    
+    }
+    .main-flex-wrapper .widget-area{
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+}
+
